@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <main id="container">
+        <form id="registro_form">
+            <div id="form_header">
+                <h1>Registro</h1>
+            </div>
+            <div id="inputs">
+                <div class="input-box">
+                    <label for="name">Nome</label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="nome" name="nome" required minlength="3" autocomplete="off"><br><br>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="idade">Idade</label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-clipboard"></i>
+                        <input type="text" id="idade" name="idade" required min="1" max="120" autocomplete="off"><br><br>
+                    </div>
+                </div>
+                <button type="submit" id="registro_buttom" disabled>Enviar</button>
+            </div>
+            <div id="message"></div>
+
+        </form>
+
+    </main>
+</body>
+<script>
+    console.log('teste');
+    const nameInput = document.getElementById("nome");
+    const ageInput = document.getElementById("idade");
+    const submitBtn = document.getElementById("registro_buttom");
+    const messageDiv = document.getElementById("message");
+
+    function validateForm(event) {
+        event.preventDefault(); // impede o envio do formulário
+        const name = nameInput.value;
+        const age = ageInput.value;
+
+        if (name.length < 3) {
+            messageDiv.textContent = "O nome deve ter pelo menos 3 caracteres";
+            return;
+        }
+
+        if (age <= 0 || age > 120) {
+            messageDiv.textContent = "A idade deve estar entre 1 e 120";
+            return;
+        }
+
+        messageDiv.textContent = "Formulário enviado com sucesso!";
+    }
+
+    nameInput.addEventListener("input", function() {
+        submitBtn.disabled = !(nameInput.value && ageInput.value);
+    });
+
+    ageInput.addEventListener("input", function() {
+        submitBtn.disabled = !(nameInput.value && ageInput.value);
+    });
+
+    submitBtn.addEventListener("click", validateForm);
+</script>
+
+</html>
