@@ -12,13 +12,13 @@
 
  > Desafio: Crie um formulário HTML com dois campos de entrada: um para o nome e outro para a idade. Em seguida, crie uma função em JavaScript que, ao clicar em um botão "Enviar", valide se o nome tem pelo menos 3 caracteres e se a idade é maior do que 0 e menor do que 120. Se as validações passarem, exiba uma mensagem de confirmação na página, caso contrário, exiba uma mensagem de erro.
 
-  <a href="https://portfolio-lucas-pinheiro.vercel.app/"><strong>➥ Visualizar Portfólio</strong></a>
+  <a href="https://desafio-forms-registro.vercel.app/"><strong>➥ Visualizar Portfólio</strong></a>
 
 </div>
 
 <br />
 
-![portfolio-banner-rep](https://github.com/p1nheiros/Portfolio/assets/124714182/a4101ff3-4906-47ec-a86a-0c3897c734fb)
+![forms-registro-banner-rep](https://github.com/p1nheiros/Forms-Registro/assets/124714182/1607220b-1f7f-4689-91ae-0540da17c028)
 
 ### 📋 Pré-requisitos
 
